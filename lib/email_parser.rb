@@ -7,13 +7,13 @@ class EmailAddressParser
   attr_accessor :email 
   def initialize(email)
     @email = email
-   
-    
   end
   
   def parse
-    array = []
-    array = @email.split(/\, || /)
+    #why that split
+    array = @email.split(/[, ]/).uniq
+    array.reject! {|n| n.edmpty?}
+    array
     
   end
   
