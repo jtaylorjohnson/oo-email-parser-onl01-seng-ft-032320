@@ -13,7 +13,7 @@ class EmailAddressParser
   
   def parse
     array = []
-    array = @email.split(", " || " ")
+    array = @email.split(/\, || /)
     
   end
   
