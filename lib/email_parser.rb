@@ -5,16 +5,13 @@
 
 class EmailAddressParser
   attr_accessor :email 
-  def initialize(email_addresses)
+  def initialize(email)
     @email = email_addresses.spit("," || " ")
-    
     
   end
   
-  
-  
-  
   def parse
+    @email
     
   end
   
